@@ -1,11 +1,13 @@
 import argparse
 import logging
+from dotenv import load_dotenv
 
 from bot.orders import place_market_order
 from bot.orders import place_limit_order
 from bot.validators import validate_inpt
 from bot.logging_config import setup_login
 
+load_dotenv()
 logger = logging.getLogger(__name__)
 
 def main():
